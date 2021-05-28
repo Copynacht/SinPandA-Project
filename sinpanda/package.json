@@ -1,0 +1,58 @@
+{
+  "name": "sinpanda",
+  "version": "1.0.0",
+  "description": "SinPandA project by Electron-Nuxt",
+  "main": "./dist/main/index.js",
+  "author": "Copynight",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node .electron-nuxt/dev.js",
+    "build": "node .electron-nuxt/build.js",
+    "test": "",
+    "lint": "node_modules/.bin/eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter ./src",
+    "lint:fix": "yarn run lint -- --fix",
+    "preinstall": "node .electron-nuxt/check-engines.js",
+    "postinstall": "electron-builder install-app-deps & yarn run lint:fix"
+  },
+  "keywords": [],
+  "homepage": "https://copynight.net/home.html",
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "resolutions": {
+    "@types/node": "12.12.6"
+  },
+  "devDependencies": {
+    "@mdi/font": "5.9.55",
+    "@nuxtjs/eslint-config": "6.0.0",
+    "@nuxtjs/vuetify": "1.11.3",
+    "@xpda-dev/core": "^0.1.6",
+    "@xpda-dev/electron-builder": "^0.2.1",
+    "@xpda-dev/electron-launcher": "^0.3.0",
+    "@xpda-dev/webpack-step": "^0.1.2",
+    "babel-eslint": "10.1.0",
+    "browser-env": "3.3.0",
+    "cross-env": "7.0.3",
+    "deepmerge": "4.2.2",
+    "electron": "12.0.6",
+    "electron-builder": "22.11.3",
+    "electron-devtools-installer": "3.2.0",
+    "eslint": "7.25.0",
+    "eslint-friendly-formatter": "4.0.1",
+    "eslint-loader": "4.0.2",
+    "nuxt": "2.15.6",
+    "roboto-fontface": "0.10.0",
+    "vuetify": "2.5.0",
+    "webpack": "4.44.2",
+    "webpack-node-externals": "2.5.2"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.4",
+    "@vue/composition-api": "^1.0.0-rc.9",
+    "about-window": "^1.14.0",
+    "electron-log": "^4.3.5",
+    "moment": "^2.29.1",
+    "sweetalert2": "^11.0.11",
+    "tree-kill": "^1.2.2"
+  }
+}
